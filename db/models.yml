@@ -1,0 +1,16 @@
+UserProfile:
+  firstname: string
+  lastname: string
+  dateofbirth: date 
+  permanentlocation: string
+  company: string
+
+UserGroup:
+  nameofthegroup: string
+  yearfounded: integer
+  adminid: integer
+
+UserActivity:
+  userprofileid: integer
+  groupprofileid: integer
+  userlastactive: datetime

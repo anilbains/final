@@ -1,0 +1,13 @@
+# command Promt: rails new final
+# Gemfile: gem 'ez'
+# In the command Prompt: go to the final folder and then do ' bundle install '
+# Add models.yml file in db
+# Command Prompt: rake db:migrate
+# Now db models are created and UserProfile and GroupProfiles are present in app->models
+# 
+
+
+
+
+
+# Loading Seeds file: Rails.application.load_seed => It will load the seeds data into the database
