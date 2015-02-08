@@ -1,5 +1,0 @@
-class FinalController < ApplicationController
-
-	
-
-end

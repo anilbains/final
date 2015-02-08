@@ -1,0 +1,8 @@
+<h1> Welcome to the Affinity Groups!!</h1>
+
+<h2> List of all th Users!!</h2>
+
+
+<% for user in @userprofiles %>
+  <p> <a href="/userprofiles/<%= user.id %>"><%= user.firstname %> <%= user.lastname %></a></p>
+<% end %>
