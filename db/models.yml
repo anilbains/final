@@ -8,7 +8,7 @@ UserProfile:
 UserGroup:
   nameofthegroup: string
   yearfounded: integer
-  adminid: integer
+  user_profile_id: integer
 
 UserActivity:
   userprofileid: integer

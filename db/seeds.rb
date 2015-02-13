@@ -27,11 +27,11 @@ steve=UserProfile.create(firstname: "Steve", lastname: "Duda", dateofbirth: "10-
 
 puts "Creating User Groups!!"
 
-iit2008= UserGroup.create(nameofthegroup: "IIT Class of 2008", yearfounded: 2008, adminid: anil.id)
-mit2004= UserGroup.create(nameofthegroup: "MIT Class of 2004", yearfounded: 2004, adminid: ash.id)
-csk2010= UserGroup.create(nameofthegroup: "CSK Class of 2010", yearfounded: 2010, adminid: ishita.id)
-kellogg2015= UserGroup.create(nameofthegroup: "Kellogg Class of 2015", yearfounded: 2015, adminid: anil.id)
-unc2012= UserGroup.create(nameofthegroup: "UNC Class of 2012", yearfounded: 2012, adminid: steve.id)
+iit2008= UserGroup.create(nameofthegroup: "IIT Class of 2008", yearfounded: 2008, user_profile_id: anil.id)
+mit2004= UserGroup.create(nameofthegroup: "MIT Class of 2004", yearfounded: 2004, user_profile_id: ash.id)
+csk2010= UserGroup.create(nameofthegroup: "CSK Class of 2010", yearfounded: 2010, user_profile_id: ishita.id)
+kellogg2015= UserGroup.create(nameofthegroup: "Kellogg Class of 2015", yearfounded: 2015, user_profile_id: anil.id)
+unc2012= UserGroup.create(nameofthegroup: "UNC Class of 2012", yearfounded: 2012, user_profile_id: steve.id)
 
 # Create User Activity
 puts "Creating User Activity!!"

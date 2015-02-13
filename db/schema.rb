@@ -22,8 +22,10 @@ ActiveRecord::Schema.define(version: 0) do
   create_table "user_groups", force: true do |t|
     t.string  "nameofthegroup"
     t.integer "yearfounded"
-    t.integer "adminid"
+    t.integer "user_profile_id"
   end
+
+  add_index "user_groups", ["user_profile_id"], name: "index_user_groups_on_user_profile_id"
 
   create_table "user_profiles", force: true do |t|
     t.string "firstname"

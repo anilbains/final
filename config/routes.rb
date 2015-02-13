@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   
-get '/final', to: 'final#affinity'
+resources :userprofiles
+
+
+root to: 'userprofiles#index'
 
 end

@@ -1,0 +1,28 @@
+<h1>Create User Profile</h1>
+ 
+ <%= form_for @userprofile, url: userprofiles_path do |f| %>
+
+  <%= f.label :firstname %>
+  <%= f.text_field :firstname %>
+  <br>
+
+  <%= f.label :lastname %>
+  <%= f.text_field :lastname %>
+  <br>
+
+  <%= f.label :dateofbirth %>
+  <%= f.date_field :dateofbirth %>
+  <br>
+
+  <%= f.label :permanentlocation %>
+  <%= f.text_field :permanentlocation %>
+  <br>
+
+  <%= f.label :company %>
+  <%= f.text_field :company %>
+  <br>
+
+
+  <%= f.submit "Create User Profile" %>
+
+<% end %>
