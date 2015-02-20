@@ -13,26 +13,31 @@
 
 ActiveRecord::Schema.define(version: 0) do
 
-  create_table "user_activities", force: true do |t|
-    t.integer  "userprofileid"
-    t.integer  "groupprofileid"
-    t.datetime "userlastactive"
+  create_table "group_members", force: true do |t|
+    t.integer "user_profile_id"
+    t.integer "user_group_id"
+  end
+
+  add_index "group_members", ["user_group_id"], name: "index_group_members_on_user_group_id"
+  add_index "group_members", ["user_profile_id"], name: "index_group_members_on_user_profile_id"
+
+  create_table "locations", force: true do |t|
+    t.string "name"
   end
 
   create_table "user_groups", force: true do |t|
     t.string  "nameofthegroup"
     t.integer "yearfounded"
-    t.integer "user_profile_id"
   end
-
-  add_index "user_groups", ["user_profile_id"], name: "index_user_groups_on_user_profile_id"
 
   create_table "user_profiles", force: true do |t|
-    t.string "firstname"
-    t.string "lastname"
-    t.date   "dateofbirth"
-    t.string "permanentlocation"
-    t.string "company"
+    t.string  "firstname"
+    t.string  "lastname"
+    t.date    "dateofbirth"
+    t.string  "company"
+    t.integer "location_id"
   end
+
+  add_index "user_profiles", ["location_id"], name: "index_user_profiles_on_location_id"
 
 end

@@ -1,0 +1,18 @@
+<h1> Welcome to the Affinity Groups!!</h1>
+
+<h2> List of all the Users!!</h2>
+
+<table>
+<tr>
+  <td>
+<% for group in @usergroups %>
+  <p> <%= link_to group.nameofthegroup, usergroup_path(group.id) %>  <%= link_to "Edit",edit_usergroup_path(group.id) %> <%= link_to "Delete", usergroups_path(group.id), method: :delete   %>
+  </p>
+
+<% end %>
+  </td>
+</tr>
+</table>
+
+
+<%= link_to "New User Group", new_usergroup_path %>

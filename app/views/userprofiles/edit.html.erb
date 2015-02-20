@@ -1,28 +1,30 @@
 <h1>Edit User Profile </h1>
  
  <%= form_for @userprofile, url: userprofile_path do |f| %>
+  <div class="form-group">
 
   <%= f.label :firstname %>
-  <%= f.text_field :firstname %>
+  <%= f.text_field :firstname, class: "form-control"  %>
   <br>
 
   <%= f.label :lastname %>
-  <%= f.text_field :lastname %>
+  <%= f.text_field :lastname, class: "form-control" %>
   <br>
 
   <%= f.label :dateofbirth %>
-  <%= f.date_field :dateofbirth %>
+  <%= f.date_field :dateofbirth, class: "form-control" %>
   <br>
 
-  <%= f.label :permanentlocation %>
-  <%= f.text_field :permanentlocation %>
+  <%= f.label :location %>
+  <%= f.collection_select :location_id, Location.all, :id, :name , {}, class: "form-control" %>
   <br>
+  
 
   <%= f.label :company %>
-  <%= f.text_field :company %>
+  <%= f.text_field :company, class: "form-control" %>
   <br>
 
 
-  <%= f.submit "Update User Profile" %>
+  <%= f.submit "Update User Profile", class: 'btn btn-success btn-lg btn-block' %>
 
 <% end %>

@@ -16,7 +16,7 @@ class UserprofilesController < ApplicationController
   end
 
   def create
-    userprofile_params = params.require( :user_profile).permit( :firstname, :lastname, :dateofbirth, :permanentlocation, :company)
+    userprofile_params = params.require( :user_profile).permit( :firstname, :lastname, :dateofbirth, :location_id, :company)
     UserProfile.create(userprofile_params)
     redirect_to userprofiles_path
   end
@@ -26,7 +26,7 @@ class UserprofilesController < ApplicationController
   end
 
   def update
-    userprofile_params = params.require( :user_profile).permit( :firstname, :lastname, :dateofbirth, :permanentlocation, :company)
+    userprofile_params = params.require( :user_profile).permit( :firstname, :lastname, :dateofbirth, :location_id, :company)
     @userprofile= UserProfile.find_by(id: params["id"])
     @userprofile.update(userprofile_params)
     redirect_to userprofiles_path

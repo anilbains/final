@@ -1,12 +1,21 @@
 <h1> User Details of <%=  @userprofile.firstname %> <%= @userprofile.lastname  %> </h1>
 <br><br>
 
-
 <p> Date of Birth: <%=  @userprofile.dateofbirth %> </p>
 <br>
 
-<p> Permanent Location: <%=  @userprofile.permanentlocation %> </p>
+<p> Permanent Location: <%=  Location.find_by(id: @userprofile.location_id).name %> </p>
 <br>
 
 <p> Company: <%=  @userprofile.company %> </p>
 <br>
+
+
+
+<%= "User has the following links " %>
+<br>
+<% for group in @userprofile.user_groups %>
+
+  <%= group.nameofthegroup %>
+  <br> 
+ <% end %>
